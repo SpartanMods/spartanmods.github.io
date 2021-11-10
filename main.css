@@ -29,10 +29,9 @@ li {
     font-size: large;
   }
   .btn {
-    display: flex;
-    float: right;
-    position: relative;
+    position: absolute;
     top: 20px;
+    left: 500px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
