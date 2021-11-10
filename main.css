@@ -20,7 +20,7 @@ li {
   }
   
   .list {
-    list-style: square;
+    list-style: circle;
     font-size: medium;
   }
   
@@ -31,8 +31,9 @@ li {
   .btn {
     position: absolute;
     top: 20px;
-    left: 500px;
+    left: 450px;
     height: 50px;
+    font-weight: bold;
     width: 50px;
     border-radius: 50%;
     border: none;
