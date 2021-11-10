@@ -16,3 +16,8 @@ li {
   #msg {
     font-family: monospace;
   }
+
+  .light-thene{
+      color: #000000;
+      background: #00FF00;
+  }
