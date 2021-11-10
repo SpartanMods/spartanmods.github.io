@@ -1,6 +1,16 @@
-body {
-    font-family: monospace;
-}
+:root {
+    --green: #00FF00;
+    --white: #ffffff;
+    --black: #000000;
+  }
+
+  * {
+    color: var(--fontColor);
+    font-family: helvetica;
+  }
+  body {
+      background: var(--bg);
+  }
 
 ul {
     font-family: helvetica;
@@ -17,7 +27,11 @@ li {
     font-family: monospace;
   }
 
-  .light-thene{
-      color: #00FF00;
-      background: #000000;
+  .light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+  }
+  .dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
   }
