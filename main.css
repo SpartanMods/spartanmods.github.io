@@ -21,10 +21,12 @@ li {
   
   .list {
     list-style: square;
+    font-size: medium;
   }
   
   #msg {
     font-family: monospace;
+    font-size: large;
   }
   .btn {
     position: absolute;
