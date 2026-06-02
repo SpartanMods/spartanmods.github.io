@@ -24,6 +24,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-icons">
+      <a href="secret.html" class="easter-egg" aria-hidden="true" tabindex="-1" title="">✦</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle color scheme">
         <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -46,16 +47,21 @@
       <div class="hero-grid"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-name reveal-up">Johnathan Margheret</p>
-      <h1 class="hero-headline reveal-up" style="--delay:0.08s">
-        Product leader building data and AI-powered products that translate complexity into value.
-      </h1>
-      <p class="hero-sub reveal-up" style="--delay:0.16s">
-        6+ years building products at the intersection of data, AI, and healthcare operations
-      </p>
-      <div class="hero-ctas reveal-up" style="--delay:0.24s">
-        <a href="#work" class="btn btn-primary">View My Work</a>
-        <a href="[RESUME_PDF_URL]" class="btn btn-outline" target="_blank" rel="noopener">Download Resume</a>
+      <div class="hero-text">
+        <p class="hero-name reveal-up">Johnathan Margheret</p>
+        <h1 class="hero-headline reveal-up" style="--delay:0.08s">
+          Product leader building data and AI-powered products that translate complexity into value.
+        </h1>
+        <p class="hero-sub reveal-up" style="--delay:0.16s">
+          6+ years building products at the intersection of data, AI, and healthcare operations
+        </p>
+        <div class="hero-ctas reveal-up" style="--delay:0.24s">
+          <a href="#work" class="btn btn-primary">View My Work</a>
+          <a href="[RESUME_PDF_URL]" class="btn btn-outline" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-photo reveal-up" style="--delay:0.32s">
+        <img src="assets/profile.jpg" alt="Johnathan Margheret" class="profile-img" loading="eager">
       </div>
     </div>
   </section>
@@ -117,14 +123,19 @@
     </div>
     <div class="timeline">
       <article class="role-card reveal-up">
-        <h3 class="role-title">Data Product Owner / PM</h3>
-        <p class="role-company">TEAM Services Group</p>
-        <p class="role-meta">
-          2024 &ndash; Present
-          <span class="meta-sep">/</span>National in-home healthcare
-          <span class="meta-sep">/</span>15+ brands
-          <span class="meta-sep">/</span>50 states
-        </p>
+        <div class="role-head">
+          <div>
+            <h3 class="role-title">Data Product Owner / PM</h3>
+            <p class="role-company">TEAM Services Group</p>
+            <p class="role-meta">
+              2024 &ndash; Present
+              <span class="meta-sep">/</span>National in-home healthcare
+              <span class="meta-sep">/</span>15+ brands
+              <span class="meta-sep">/</span>50 states
+            </p>
+          </div>
+          <img src="assets/work.jpg" alt="Johnathan at work" class="role-photo" loading="lazy">
+        </div>
         <ul class="role-highlights">
           <li>Built AI document parsing app saving $300K per year</li>
           <li>Developed AI-powered lead generation tool driving $1.5M in pipeline</li>
