@@ -1,5 +1,27 @@
 const OPEN_TO_WORK = false;
 
+// Theme toggle
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+
+function applyTheme(theme, animate) {
+  if (animate) {
+    document.body.classList.add('theme-transitioning');
+    setTimeout(() => document.body.classList.remove('theme-transitioning'), 280);
+  }
+  root.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+}
+
+const saved = localStorage.getItem('theme');
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(saved || (systemDark ? 'dark' : 'light'), false);
+
+themeToggle.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next, true);
+});
+
 // Progress bar + nav scroll state
 const progressBar = document.getElementById('progressBar');
 const header = document.getElementById('siteHeader');
