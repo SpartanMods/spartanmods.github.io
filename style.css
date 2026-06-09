@@ -370,8 +370,53 @@ ul { list-style: none; }
   color: var(--text-dim); letter-spacing: 0.12em;
 }
 .proj-title { font-size: 1.1rem; font-weight: 700; }
-.proj-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
+.proj-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
 .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* Expandable project detail */
+.proj-detail { flex: 1; }
+.proj-detail > summary {
+  list-style: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: var(--font-mono); font-size: 0.7rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); transition: color var(--t);
+}
+.proj-detail > summary::-webkit-details-marker { display: none; }
+.proj-detail > summary:hover { color: var(--text); }
+.proj-detail > summary::after {
+  content: '+'; font-size: 0.9rem; line-height: 1;
+  color: var(--text-dim); transition: color var(--t);
+}
+.proj-detail[open] > summary::after { content: '\2212'; }
+.proj-detail[open] > summary { color: var(--text); margin-bottom: 0.75rem; }
+.proj-detail-body { display: flex; flex-direction: column; gap: 0.6rem; }
+.proj-detail-body p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+.proj-label {
+  display: block; font-family: var(--font-mono);
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 0.1rem;
+}
+.project-card.c-coral .proj-label { color: var(--coral); }
+.project-card.c-mint  .proj-label { color: var(--mint); }
+.project-card.c-amber .proj-label { color: var(--amber); }
+
+/* Open to work badge */
+.open-badge {
+  display: inline-block; margin-bottom: 1rem;
+  padding: 0.3rem 0.7rem; border-radius: 999px;
+  font-family: var(--font-mono); font-size: 0.65rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--mint); border: 1px solid var(--mint);
+  background: rgba(0, 220, 171, 0.08);
+}
+.open-badge[hidden] { display: none; }
+.open-badge::before {
+  content: ''; display: inline-block;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--mint); margin-right: 0.45rem;
+  vertical-align: middle;
+}
 
 /* Personal project */
 .personal-project-card {
