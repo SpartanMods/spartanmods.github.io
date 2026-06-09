@@ -401,23 +401,6 @@ ul { list-style: none; }
 .project-card.c-mint  .proj-label { color: var(--mint); }
 .project-card.c-amber .proj-label { color: var(--amber); }
 
-/* Open to work badge */
-.open-badge {
-  display: inline-block; margin-bottom: 1rem;
-  padding: 0.3rem 0.7rem; border-radius: 999px;
-  font-family: var(--font-mono); font-size: 0.65rem;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--mint); border: 1px solid var(--mint);
-  background: rgba(0, 220, 171, 0.08);
-}
-.open-badge[hidden] { display: none; }
-.open-badge::before {
-  content: ''; display: inline-block;
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--mint); margin-right: 0.45rem;
-  vertical-align: middle;
-}
-
 /* Personal project */
 .personal-project-card {
   background: var(--bg-surface);
