@@ -292,13 +292,14 @@ ul { list-style: none; }
 .role-card:hover { border-color: var(--teal); background: var(--bg-surface-h); }
 .role-head {
   display: flex; justify-content: space-between;
-  align-items: flex-start; gap: 1.5rem; margin-bottom: 1.5rem;
+  align-items: stretch; gap: 1.5rem; margin-bottom: 1.5rem;
 }
 .role-photo {
-  width: 100px; height: 120px;
-  object-fit: cover; object-position: top center;
+  width: 220px; min-height: 180px;
+  object-fit: cover; object-position: center 20%;
   border-radius: var(--r); border: 1px solid var(--border);
   flex-shrink: 0; display: block;
+  align-self: stretch;
 }
 .role-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; letter-spacing: 0.01em; }
 .role-company { font-size: 0.875rem; color: var(--teal); font-weight: 500; margin-bottom: 0.35rem; }
@@ -579,7 +580,7 @@ ul { list-style: none; }
   .skills-grid { grid-template-columns: 1fr; gap: 1.75rem; }
   .pp-features { grid-template-columns: 1fr 1fr; }
   .role-head { flex-direction: column; }
-  .role-photo { width: 100%; height: 160px; object-position: center 25%; }
+  .role-photo { width: 100%; min-height: 0; height: 200px; object-position: center 25%; }
   .timeline { padding-left: 1.75rem; }
   .role-card::before { left: calc(-1.75rem - 3px); }
 }
