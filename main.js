@@ -1,8 +1,4 @@
-const OPEN_TO_WORK = true;
-
-// Show the "open to work" badge when the flag is on
-const openBadge = document.getElementById('openBadge');
-if (openBadge && OPEN_TO_WORK) openBadge.hidden = false;
+const OPEN_TO_WORK = false;
 
 // Theme toggle
 const root = document.documentElement;
