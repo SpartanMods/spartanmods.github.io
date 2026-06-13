@@ -35,6 +35,46 @@ function onScroll() {
 
 window.addEventListener('scroll', onScroll, { passive: true });
 
+// Active nav section tracking
+const navSections = document.querySelectorAll('#about, #work, #projects, #contact');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+let lastActiveLink = null;
+
+const navObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+    if (!link) return;
+    if (entry.isIntersecting) {
+      if (lastActiveLink) lastActiveLink.classList.remove('active');
+      link.classList.add('active');
+      lastActiveLink = link;
+    }
+  });
+}, { rootMargin: '-60px 0px -80% 0px', threshold: 0 });
+
+navSections.forEach(s => navObs.observe(s));
+
+// Custom cursor (desktop pointer devices only)
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const cursorDot = document.querySelector('.cursor-dot');
+  if (cursorDot) {
+    let cursorVisible = false;
+    document.addEventListener('mousemove', e => {
+      cursorDot.style.left = e.clientX + 'px';
+      cursorDot.style.top = e.clientY + 'px';
+      if (!cursorVisible) { cursorDot.classList.add('visible'); cursorVisible = true; }
+    });
+    document.addEventListener('mouseleave', () => {
+      cursorDot.classList.remove('visible');
+      cursorVisible = false;
+    });
+    document.querySelectorAll('a, button, summary, [role="button"]').forEach(el => {
+      el.addEventListener('mouseenter', () => cursorDot.classList.add('expanded'));
+      el.addEventListener('mouseleave', () => cursorDot.classList.remove('expanded'));
+    });
+  }
+}
+
 // Scroll-triggered reveal
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
