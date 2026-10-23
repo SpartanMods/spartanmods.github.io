@@ -17,7 +17,8 @@ hand-authored HTML, CSS, and vanilla JavaScript. Editing a file and pushing to
 
 | Path | Role |
 | --- | --- |
-| `index.html` | The entire portfolio — a single-page site (hero, about, work, projects, personal, skills, contact). This is the main file you'll edit. |
+| `index.html` | The entire portfolio — a single-page site (hero, about, how I work/values, work, projects, personal, skills, beyond work, contact). This is the main file you'll edit. A commented-out Notes section, nav link and hero button wait for the first published post. |
+| `notes/` | Writing. `_post-template.html` is the page template for a post and `_drafts/` holds post outlines; Jekyll skips `_`-prefixed paths, so neither is published. Publish a post by copying the template to `notes/<slug>.html`, then uncomment the Notes blocks in `index.html`. |
 | `style.css` | All styles for `index.html`. CSS custom properties at `:root`, dark theme is the default with a light theme via `[data-theme]`. |
 | `main.js` | All behavior for `index.html`: theme toggle (persisted to `localStorage`), scroll progress bar, `IntersectionObserver` reveal animations, and stat count-up. Respects `prefers-reduced-motion`. |
 | `secret.html` | Hidden "easter egg" page — a casual/personal version of the bio. Self-contained: all CSS and JS are **inline**, it does not use `style.css` or `main.js`. Reached via the `✦` link in the nav. |
@@ -60,7 +61,9 @@ before deleting, since they are committed history.
 - Sections in `index.html` use `id` anchors (`#about`, `#work`, …) that the nav
   links to, and numbered `.section-tag` labels (`02 · About`). Keep numbering
   and anchors consistent when adding or reordering sections.
-- Fonts are loaded from Google Fonts (Roboto + Roboto Mono) in the `<head>`.
+- Fonts are loaded from Google Fonts (Roboto, Roboto Mono, DM Serif Display) in the `<head>`.
+- Page views are counted by GoatCounter (cookie-free script in the `<head>` of `index.html` and the post template).
+- Project cards are specific about **what was built** (applications, integrations, AI extraction) and general about outcomes; hard numbers live in the Work Experience bullets. Don't add employer system names, vendors, or exact dollar figures to project cards.
 - Use semantic HTML and the existing ARIA attributes (`aria-label`,
   `aria-labelledby`, `role`) — the markup is accessibility-conscious; preserve
   that when editing.
