@@ -495,6 +495,7 @@ ul { list-style: none; }
   transition: color var(--t), border-color var(--t);
 }
 .pp-link:hover { color: var(--teal); border-color: var(--border-h); }
+.pp-private, .pp-private:hover { color: var(--text-dim); border-color: var(--border); }
 .pp-desc {
   font-size: 0.95rem; color: var(--text-muted);
   line-height: 1.75; max-width: 68ch;
@@ -758,6 +759,7 @@ ul { list-style: none; }
 [data-theme="light"] .btn-outline { border-color: #cccccc; }
 [data-theme="light"] .btn-outline:hover { border-color: #007a85; color: #007a85; }
 [data-theme="light"] .pp-link:hover { color: #007a85; border-color: #007a85; }
+[data-theme="light"] .pp-private:hover { color: var(--text-dim); border-color: var(--border); }
 [data-theme="light"] .tag:hover { border-color: #007a85; color: var(--text); }
 [data-theme="light"] ::-webkit-scrollbar-thumb { background: #cccccc; }
 [data-theme="light"] .value-proof-label,
