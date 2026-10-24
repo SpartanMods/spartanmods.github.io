@@ -36,7 +36,7 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 
 // Active nav section tracking
-const navSections = document.querySelectorAll('#about, #work, #projects, #contact');
+const navSections = document.querySelectorAll('#about, #values, #work, #projects, #notes, #contact');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 let lastActiveLink = null;
 
