@@ -36,19 +36,17 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 
 // Active nav section tracking
-const navSections = document.querySelectorAll('#about, #values, #work, #projects, #notes, #contact');
+const navSections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 let lastActiveLink = null;
 
 const navObs = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
     const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-    if (!link) return;
-    if (entry.isIntersecting) {
-      if (lastActiveLink) lastActiveLink.classList.remove('active');
-      link.classList.add('active');
-      lastActiveLink = link;
-    }
+    if (lastActiveLink) lastActiveLink.classList.remove('active');
+    if (link) link.classList.add('active');
+    lastActiveLink = link;
   });
 }, { rootMargin: '-60px 0px -80% 0px', threshold: 0 });
 

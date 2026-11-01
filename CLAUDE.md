@@ -63,7 +63,7 @@ before deleting, since they are committed history.
   and anchors consistent when adding or reordering sections.
 - Fonts are loaded from Google Fonts (Roboto, Roboto Mono, DM Serif Display) in the `<head>`.
 - Page views are counted by GoatCounter (cookie-free script in the `<head>` of `index.html` and the post template).
-- Project cards are specific about **what was built** (applications, integrations, AI extraction) and general about outcomes; hard numbers live in the Work Experience bullets. Don't add employer system names, vendors, or exact dollar figures to project cards.
+- Project cards are specific about **what was built** (applications, integrations, AI extraction) and general about outcomes; hard numbers live in the Work Experience bullets. Don't add current-employer (TEAM) system names, vendors, or exact dollar figures to project cards; general tools from past roles (e.g. Salesforce, Power BI) are fine.
 - Use semantic HTML and the existing ARIA attributes (`aria-label`,
   `aria-labelledby`, `role`) — the markup is accessibility-conscious; preserve
   that when editing.

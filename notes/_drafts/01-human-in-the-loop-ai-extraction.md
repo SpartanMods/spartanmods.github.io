@@ -3,7 +3,6 @@
 **Working title:** "We didn't replace the reviewers. We stopped making them type."
 **Shows:** Outcomes over output · Optimization machine · responsible AI in a regulated industry
 **Length:** 800–1,200 words, in your own voice
-**Sensitivity:** describe what was built, not TEAM's systems, vendors, document types or exact numbers. Give your manager a heads-up before posting.
 
 1. **The hook.** High-volume documents keyed in by hand: slow, error-prone, and every mistake shows up later as reconciliation work.
 2. **Why "just use an LLM" isn't the answer** in a regulated environment: accuracy, auditability, trust.
